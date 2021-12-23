@@ -24,10 +24,10 @@
 	<body>
 		<script type="module">
 			//import
-			import * as THREE from "../build/three.module.js";
-			import { OrbitControls } from "./jsm/controls/OrbitControls.js";
+			import * as THREE from "three.module.js";
+			import { OrbitControls } from "OrbitControls.js";
 			//	import { AnaglyphEffect } from "./jsm/effects/AnaglyphEffect.js";
-			import { FontLoader } from "./jsm/loaders/FontLoader.js";
+			import { FontLoader } from "FontLoader.js";
 
 			// buat objek
 			let camera, scene, renderer, controls, effect;
@@ -44,7 +44,7 @@
 				scene.fog = new THREE.FogExp2(0xffffff, 0.002);
 
 				const loader = new FontLoader();
-				loader.load("fonts/helvetiker_regular.typeface.json", function (font) {
+				loader.load("helvetiker_regular.typeface.json", function (font) {
 					const color = 0xe6ffff;
 
 					const matDark = new THREE.LineBasicMaterial({
@@ -183,7 +183,7 @@
 					path + "nz" + format,
 				];
 				const texture = new THREE.TextureLoader().load(
-					"textures/cube/pisaHDR/proksi 1 1.jpg",
+					"proksi 1 1.jpg",
 					render
 				);
 				const width = window.innerWidth || 2;
